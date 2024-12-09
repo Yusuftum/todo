@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="task-form">
+            <div class="input-group">
+                <label for="new-task">Görev:</label>
+                <input type="text" id="new-task" placeholder="Yeni Görev Ekle" required maxlength="18">
+            </div>
+            <div class="input-group">
+                <label for="task-date">Tarih & Saat:</label>
+                <input type="datetime-local" id="task-date">
+            </div>
+            <div class="input-group">
+                <label for="task-category">Kategori:</label>
+                <select id="task-category">
+                    <option value="Genel">Genel</option>
+                    <option value="İş">İş</option>
+                    <option value="Kişisel">Kişisel</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="task-priority">Öncelik:</label>
+                <select id="task-priority">
+                    <option value="Düşük">Düşük</option>
+                    <option value="Orta">Orta</option>
+                    <option value="Yüksek">Yüksek</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="task-notes">Notlar:</label>
+                <textarea id="task-notes" placeholder="Notlar" maxlength="18"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="button" id="add-task">Ekle</button>
+                <button type="button" id="clear-tasks">Tümünü Sil</button>
+            </div>
+        </form>
+        <div class="filter-group">
+            <label for="filter-tasks">Görevleri Filtrele:</label>
+            <select id="filter-tasks">
+                <option value="all">Tümü</option>
+                <option value="active">Aktif</option>
+                <option value="completed">Tamamlanan</option>
+            </select>
+        </div>
+        <ul id="task-list"></ul>
+        <h2>Tamamlanan Görevler</h2>
+        <ul id="completed-task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
